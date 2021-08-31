@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400&display=swap');
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+header{
+    display: flex;
+    background-color: #1f1e1e;
+}
+.header-perfil{
+    justify-content: space-between;
+    height: 80px;
+}
+header .user{
+    font-size: small;
+    font-weight: bold;
+}
+header small, header a{
+    display: flex;
+    margin: 8px;
+}
+header a{
+    height: 19px;
+    align-items: center;
+}
+header svg{
+    color: rgb(179, 36, 36);
+    margin-left: 8px;
+}
+img{
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+}
+.container-user img{
+    width: 70px;
+    margin: auto;
+    margin-top: -40px;
+
+}
+.infos-user, .infos-bio{
+    margin: 35px auto;
+}
+.container-yellow{
+    display: flex;
+}
+.container-yellow .yellow-detail{    
+    width: 15px;
+    height: 25px;
+    border-radius: 20%;
+    background-color: #FFCE00;
+    margin-left: -8px;
+    margin-right: 10px;
+}
+.infos-user p, .infos-bio p{
+    margin: auto 18px;
+}
+.infos-account{
+    background-color: #444444;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+    margin-bottom: 25px;
+}
+.infos-account h3{
+    text-align: center;
+    font-size: 28px;
+}
+.infos-account p{
+    font-size: 14px;
+    font-weight: 100;
+}
+h2{
+    font-size: 18px;
+}
+p{
+    font-weight: 100;
+    padding: 6px 0;
+}

@@ -1,0 +1,43 @@
+header.header{
+    align-items: center;   
+}
+header.header h2{
+    text-align: center;
+    width: 100%;
+    margin-right: 32px;
+    font-size: 16px;
+}
+.container-repos{
+    margin: 35px 0;
+}   
+.container-yellow{
+    display: flex;
+}
+.container-repos p, .icons-repos{
+    margin: auto 18px;
+    font-size: 14px;
+}
+.icons-repos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.star-repos{
+    display: flex;
+    align-items: center;
+}
+.star-repos p{
+    margin: 0;
+    font-size: 18px;
+}
+.star-repos svg{
+    color: #ffce00;
+    margin-right: 5px;
+}
+svg.feather.feather-unlock{
+    color: #63BF1F;
+    margin-right: 8px;
+}
+svg.feather.feather-lock{
+    color: #CC042A;
+}

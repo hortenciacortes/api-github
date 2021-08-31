@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+## API GitHub 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌱 Desafio utilizando a API do GitHub
+🚧 Projeto em andamento
 
-## Available Scripts
+### Conteúdo
 
-In the project directory, you can run:
+<p align="center">  
+	<a href="#sobre-desafio">Sobre o desafio</a> •
+	<a href="#prototipo">Protótipo da aplicação</a> •
+	<a href="#requisitos">Requisitos</a> •
+	<a href="#layout">Layout</a> • 
+	<a href="#executar-projeto">Como executar o projeto</a> • 
+	<a href="#tecnologias">Tecnologias</a> • 
+	<a href="#autora">Autora</a>  
+</p>
 
-### `npm start`
+### 💻 Sobre o desafio<a id="sobre-desafio"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A aplicação sera uma PWA que funcionará em cima da api do github [Documentação API GITHUB](https://developer.github.com/v3/ "Api Github"), onde deve existir uma tela de login que o usuário digitará o nickname de um usuário do github, ao buscar esse usuário, ele deve ser redirecionado para uma tela interna onde estará disponível informações gerais do usuário conforme o protótipo, com uma navegação de tabs para **Início**, **Repositórios**, **Seguidores**, **Seguindo**.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 📱 Protótipo da aplicação<a id="prototipo"></a>
 
-### `npm test`
+-   O protótipo do aplicativo está disponível no link  [link](https://xd.adobe.com/view/1798f30c-7746-444c-bffa-91b29835eef5-42cb/ "Protótipo")  (tente reproduzir o layout da forma mais fiel possível)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🎨  Layout <a id="layout"></a>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📚  Requisitos <a id="requisitos"></a>
+- **Não funcionais**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [x]  O aplicativo deve usar reactjs.
+- [x] Você deve gerenciar suas rotas com o react-router.
+- [x] Você deve gerenciar todo o estado do aplicativo com redux ou Context Api.
+- [ ] Para estilizar o aplicativo, adoraríamos ver você usando componentes estilizados, mas não é obrigatório.
+- [ ] Adoraríamos ver você usando Typescript para tipar os dados, mas não é obrigatório.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Funcionais**
 
-### `npm run eject`
+- [x] Você deve permitir que um usuário seja autenticado buscando pelo username do github
+- [x] Você deve armazenas as informações de (login, name, email, location, company, bio, avatar_url, followers_url, following_url, organizations_url, starred_url, public_repos, public_gists, followers, following)
+- [ ] Você deve possuir uma navegação por abas com items ("Início", "Repositórios", "Seguidores", "Seguindo")
+- [ ] Quando clicado nas abas deve ser exibido as listagens respectivas de ("Início", Repositórios: repos_url, Seguidores: followers_url e Seguindo: following_url)
+- [ ] Quando o usuário estiver dentro de uma aba de seguidores ou seguindo, você deve ter um botão que torne aquele usuário o principal da aplicação, substituindo o usuário salvo na autenticação pelo usuário da tela atual.
+- [x] Na tela início, você deve ter um botão que permita o usuário sair da aplicação o redirecionando para a tela de autenticação
+-   Na tela início, você deve apenas renderizar as informações do protótipo se a informação de fato existir no retorno da requisição de autenticação.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 🚀  Como executar o projeto <a id="executar-projeto"></a>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:  [Git](https://git-scm.com/),  [Node.js](https://nodejs.org/pt-br/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Além disto é bom ter um editor para trabalhar com o código como  [VSCode](https://code.visualstudio.com/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 🎲Rodando a Aplicação
 
-## Learn More
+     # Clone este repositório
+	     git clone https://github.com/HortenciaCorts/api-github
+     # Acesse a pasta do projeto no terminal
+	     cd api-github
+     # Instale a dependência do npm
+	     npm install
+     # Execute a aplicação em modo de desenvolvimento
+	     npm start 
+     # O servidor iniciará na porta: 3000
+     # Acesse http://localhost:3000
+     # Será necessário adicionar manualmente /login na url (http://localhost:3000/login)
+    
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+>  Obs: Por ora, quando é feita uma requisição para a api é necessário atualizar a página, sendo assim, ao clicar no botão de login, seguidores, seguindo e repositórios atualize a página para prosseguir.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🛠 Tecnologias <a id="tecnologias"></a>
 
-### Code Splitting
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+- React
+- React-router
+- Redux
+- Axios
+- NodeJS
+- CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 👧 Autora <a id="autora"></a>
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feito com 💖🥵😵 por Hortência Côrtes 👩‍💻 
