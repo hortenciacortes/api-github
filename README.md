@@ -1,6 +1,8 @@
 ## API GitHub 
 
-🌱 Desafio utilizando a API do GitHub
+> 🤓 Teste Lógico: https://github.com/HortenciaCorts/api-github/tree/main/src/TesteLogico
+
+🌱 Desafio utilizando a API do GitHub 
 🚧 Projeto em andamento
 
 ### Conteúdo
@@ -22,9 +24,9 @@ A aplicação sera uma PWA que funcionará em cima da api do github [Documentaç
 ### 📱 Protótipo da aplicação<a id="prototipo"></a>
 
 -   O protótipo do aplicativo está disponível no link  [link](https://xd.adobe.com/view/1798f30c-7746-444c-bffa-91b29835eef5-42cb/ "Protótipo")  (tente reproduzir o layout da forma mais fiel possível)
-
 ### 🎨  Layout <a id="layout"></a>
-
+![Gif com imagens do desafio](https://github.com/HortenciaCorts/api-github/blob/main/src/images/api-github.gif?raw=true)
+Local: https://github.com/HortenciaCorts/api-github/blob/main/src/images/api-github.gif
 
 ### 📚  Requisitos <a id="requisitos"></a>
 - **Não funcionais**
