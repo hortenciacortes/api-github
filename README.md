@@ -26,7 +26,6 @@ A aplicação sera uma PWA que funcionará em cima da api do github [Documentaç
 -   O protótipo do aplicativo está disponível no link  [link](https://xd.adobe.com/view/1798f30c-7746-444c-bffa-91b29835eef5-42cb/ "Protótipo")  (tente reproduzir o layout da forma mais fiel possível)
 ### 🎨  Layout <a id="layout"></a>
 ![Gif com imagens do desafio](https://github.com/HortenciaCorts/api-github/blob/main/src/images/api-github.gif?raw=true)
-Local: https://github.com/HortenciaCorts/api-github/blob/main/src/images/api-github.gif
 
 ### 📚  Requisitos <a id="requisitos"></a>
 - **Não funcionais**
@@ -65,10 +64,6 @@ Além disto é bom ter um editor para trabalhar com o código como  [VSCode](htt
 	     npm start 
      # O servidor iniciará na porta: 3000
      # Acesse http://localhost:3000
-     # Será necessário adicionar manualmente /login na url (http://localhost:3000/login)
-    
-
->  Obs: Por ora, quando é feita uma requisição para a api é necessário atualizar a página, sendo assim, ao clicar no botão de login, seguidores, seguindo e repositórios atualize a página para prosseguir.
 
 ### 🛠 Tecnologias <a id="tecnologias"></a>
 
