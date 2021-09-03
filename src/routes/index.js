@@ -10,7 +10,7 @@ import history from './history';
 const Routes = () => (
   <BrowserRouter history={history}>
     <Switch>
-      <Route path='/login' component={Login} />
+      <Route path='/' exact component={Login} />
       <Route path='/perfil' component={Perfil} />
       <Route path='/repos' component={Respositorio} />
       <Route path='/followers' component={Followers} />

@@ -1,10 +1,11 @@
 import './Login.css'
 import React, { useState } from "react";
+import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
-import { push } from 'connected-react-router';
 import axios from "axios";
 
 function Login() {
+  const history = useHistory()
   const dispatch = useDispatch()
   const [usuario, setUsuario] = useState('')
 
@@ -26,7 +27,7 @@ function Login() {
         followers_url: response.data.followers_url,
         following_url: response.data.following_url,
       })
-      dispatch(push('/perfil'))
+      history.push('/perfil')
     });
   }
   return (
