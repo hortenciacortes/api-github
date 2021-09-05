@@ -1,14 +1,5 @@
-header.header{
-    align-items: center;   
-}
-header.header h2{
-    text-align: center;
-    width: 100%;
-    margin-right: 32px;
-    font-size: 16px;
-}
 .container-repos{
-    margin: 35px 0;
+    margin: 15px 0;
 }   
 .container-yellow{
     display: flex;

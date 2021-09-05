@@ -33,11 +33,13 @@ img{
     border-radius: 50%;
     display: flex;
 }
+.container-user{
+    position: relative;
+}
 .container-user img{
     width: 70px;
     margin: auto;
     margin-top: -40px;
-
 }
 .infos-user, .infos-bio{
     margin: 35px auto;

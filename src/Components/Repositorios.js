@@ -1,15 +1,14 @@
-import './Repositorios.css'
-import { connect } from "react-redux"
+import './styles/Repositorios.css';
+import Menu from './Menu';
+import Header from './Header';  
+import { connect } from "react-redux";
 
 function Repositorio({ user }) {
     return (
         <div>
-            <header className="header">
-                <a href="./perfil">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                </a>
-                <h2>{user.public_repos} Repositório</h2>
-            </header>
+            <Header qtd={user.public_repos} name="Repositórios" />
+            
+            <div className="container">
             {user.repos_name.map((element, i) => (
                 <div key={i} className="container-repos">
                     <div className="container-yellow">
@@ -29,6 +28,8 @@ function Repositorio({ user }) {
                     </div>
                 </div>
             ))}
+            </div>
+            <Menu />
         </div>
     )
 }
