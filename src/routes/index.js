@@ -1,5 +1,4 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { ConnectedRouter } from 'connected-react-router';
 import Login from '../Components/Login';
 import Perfil from '../Components/Perfil';
 import Respositorio from '../Components/Repositorios';
