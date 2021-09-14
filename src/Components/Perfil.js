@@ -1,14 +1,14 @@
 import './styles/Perfil.css';
 import Menu from './Menu';
+import { useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { push } from 'connected-react-router';
 import { Link } from 'react-router-dom';
 const axios = require('axios')
 
 function Perfil({ user }) {
     const dispatch = useDispatch()
 
-    function searchRepos() {
+    useEffect(() => {
         const names = []
         const descriptions = []
         const stars = []
@@ -24,11 +24,10 @@ function Perfil({ user }) {
                 repos_desc: descriptions,
                 repos_star: stars
             })
-            dispatch(push('/repos'))
         })
-    }
+    }, [])
 
-    function searchFollowers() {
+    useEffect(() => {
         const login = []
         const avatar = []
         axios.get(`${user.followers_url}`).then(response => {
@@ -42,15 +41,12 @@ function Perfil({ user }) {
                 followers_login: login,
                 followers_avatar: avatar,
             })
-            dispatch(push('/followers'))
         })
-    }
+    }, [])
 
-
-    function searchFollowing() {
+    useEffect(() => {
         const login = []
         const avatar = []
-        console.log(user.following_url)
         const following = user.following_url.replace('{/other_user}', '')
         axios.get(`${following}`).then(response => {
             response.data.forEach(item => {
@@ -62,9 +58,8 @@ function Perfil({ user }) {
                 following_login: login,
                 following_avatar: avatar,
             })
-            dispatch(push('/following'))
         })
-    }
+    }, [])
 
     return (
         <div className="container-user">
@@ -85,15 +80,15 @@ function Perfil({ user }) {
                 <p>{user.location}</p>
             </div>
             <div className="infos-account">
-                <Link to="followers" onClick={searchFollowers}>
+                <Link to="followers">
                     <h3>{user.followers}</h3>
                     <p>Seguidores</p>
                 </Link>
-                <Link to="/following" onClick={searchFollowing}>
+                <Link to="/following">
                     <h3>{user.following}</h3>
                     <p>Seguindo</p>
                 </Link>
-                <Link to="/repos" onClick={searchRepos}>
+                <Link to="/repos">
                     <h3>{user.public_repos}</h3>
                     <p>Repos</p>
                 </Link>

@@ -7,7 +7,6 @@ function Repositorio({ user }) {
     return (
         <div>
             <Header qtd={user.public_repos} name="Repositórios" />
-            
             <div className="container">
             {user.repos_name.map((element, i) => (
                 <div key={i} className="container-repos">
