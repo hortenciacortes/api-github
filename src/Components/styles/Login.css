@@ -25,7 +25,7 @@ input, button.login{
 }
 input{
     padding-left: 10px;
-    margin: 16px auto;
+    margin: 16px auto 8px;
 }
 button.login{    
     display: flex;
@@ -34,7 +34,12 @@ button.login{
 
     background-color: #FFCE00;
     font-weight: bold;
+
+    margin-top: 8px;
 }
 button.login svg{
     margin-left: 8px;
+}
+.message{
+    color: rgb(179, 36, 36);
 }
