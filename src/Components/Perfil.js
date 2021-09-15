@@ -1,8 +1,9 @@
-import './styles/Perfil.css';
-import Menu from './Menu';
 import { useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import './styles/Perfil.css';
+import Menu from './Menu';
 const axios = require('axios')
 
 function Perfil({ user }) {
@@ -25,13 +26,12 @@ function Perfil({ user }) {
                 repos_star: stars
             })
         })
-    }, [])
+    }, [dispatch, user.repos_url])
 
     useEffect(() => {
         const login = []
         const avatar = []
         axios.get(`${user.followers_url}`).then(response => {
-            console.log(response.data)
             response.data.forEach(item => {
                 login.push(item.login)
                 avatar.push(item.avatar_url)
@@ -42,7 +42,7 @@ function Perfil({ user }) {
                 followers_avatar: avatar,
             })
         })
-    }, [])
+    }, [dispatch, user.followers_url])
 
     useEffect(() => {
         const login = []
@@ -59,7 +59,7 @@ function Perfil({ user }) {
                 following_avatar: avatar,
             })
         })
-    }, [])
+    }, [dispatch, user.following_url])
 
     return (
         <div className="container-user">
@@ -71,34 +71,36 @@ function Perfil({ user }) {
                 </Link>
             </header>
             <img src={user.avatar} alt="avatar" />
-            <div className="infos-user">
-                <div className="container-yellow">
-                    <div className="yellow-detail"></div>
-                    <h2>{user.name.toUpperCase()}</h2>
+            <div className="container-infos">
+                <div className="infos-user">
+                    <div className="container-yellow">
+                        <div className="yellow-detail"></div>
+                        <h2>{user.name.toUpperCase()}</h2>
+                    </div>
+                    <p>{user.email}</p>
+                    <p>{user.location}</p>
                 </div>
-                <p>{user.email}</p>
-                <p>{user.location}</p>
-            </div>
-            <div className="infos-account">
-                <Link to="followers">
-                    <h3>{user.followers}</h3>
-                    <p>Seguidores</p>
-                </Link>
-                <Link to="/following">
-                    <h3>{user.following}</h3>
-                    <p>Seguindo</p>
-                </Link>
-                <Link to="/repos">
-                    <h3>{user.public_repos}</h3>
-                    <p>Repos</p>
-                </Link>
-            </div>
-            <div className="infos-bio">
-                <div className="container-yellow">
-                    <div className="yellow-detail"></div>
-                    <h2>BIO</h2>
+                <div className="infos-account">
+                    <Link to="followers">
+                        <h3>{user.followers}</h3>
+                        <p>Seguidores</p>
+                    </Link>
+                    <Link to="/following">
+                        <h3>{user.following}</h3>
+                        <p>Seguindo</p>
+                    </Link>
+                    <Link to="/repos">
+                        <h3>{user.public_repos}</h3>
+                        <p>Repos</p>
+                    </Link>
                 </div>
-                <p>{user.bio}</p>
+                <div className="infos-bio">
+                    <div className="container-yellow">
+                        <div className="yellow-detail"></div>
+                        <h2>BIO</h2>
+                    </div>
+                    <p>{user.bio}</p>
+                </div>
             </div>
             <Menu />
         </div>

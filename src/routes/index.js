@@ -4,10 +4,9 @@ import Perfil from '../Components/Perfil';
 import Respositorio from '../Components/Repositorios';
 import Followers from '../Components/Followers';
 import Following from '../Components/Following';
-import history from './history';
 
 const Routes = () => (
-  <BrowserRouter history={history}>
+  <BrowserRouter>
     <Switch>
       <Route path='/' exact component={Login} />
       <Route path='/perfil' component={Perfil} />

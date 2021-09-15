@@ -1,7 +1,8 @@
+import { connect } from "react-redux";
+
 import './styles/Repositorios.css';
 import Menu from './Menu';
 import Header from './Header';  
-import { connect } from "react-redux";
 
 function Repositorio({ user }) {
     return (

@@ -33,6 +33,12 @@ img{
     border-radius: 50%;
     display: flex;
 }
+.container-infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: calc(100vh - 180px);
+}
 .container-user{
     position: relative;
 }
@@ -40,9 +46,6 @@ img{
     width: 70px;
     margin: auto;
     margin-top: -40px;
-}
-.infos-user, .infos-bio{
-    margin: 35px auto;
 }
 .container-yellow{
     display: flex;
@@ -56,18 +59,16 @@ img{
     margin-right: 10px;
 }
 .infos-user p, .infos-bio p{
-    margin: auto 18px;
+    margin: auto 8px;
 }
 .infos-account{
     background-color: #444444;
     height: 60px;
+    padding: 0 40px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 40px;
-    margin-bottom: 25px;
 }
 .infos-account h3{
     text-align: center;

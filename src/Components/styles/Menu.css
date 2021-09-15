@@ -1,7 +1,8 @@
 .container{
     position: relative;
     top: 30px;
-    bottom: 60px;
+    bottom: 60px;    
+    margin-bottom: 95px;
 }
 nav.footer{
     background-color: white;

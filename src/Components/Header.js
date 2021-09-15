@@ -1,5 +1,5 @@
-import './styles/Header.css';
 import { Link } from "react-router-dom";
+import './styles/Header.css';
 
 function Header({ qtd, name }) {
     return (
